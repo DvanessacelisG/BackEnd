@@ -14,7 +14,7 @@ pipeline {
               steps{
                   dir('/var/lib/jenkins/workspace'){
                   sh 'ls'
-                  sshPublisher(publishers: [sshPublisherDesc(configName: 'ubuntu@12.0.3.250', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ls' , execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'movie-analyst-api.tar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                  sshPublisher(publishers: [sshPublisherDesc(configName: 'ubuntu@12.0.3.250', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'tar zxvf movie-analyst-api.tar.gz' , execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'movie-analyst-api.tar.gz')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
             }          
         } 
