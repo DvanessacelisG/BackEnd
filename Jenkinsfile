@@ -21,7 +21,7 @@ pipeline {
                 stage('Start service'){
             steps{
                 sh 'chown ubuntu:ubuntu /home/ubuntu/.pm2/rpc.sock'
-                sh 'chown ubuntu:ubuntu /home/ubuntu/.pm2/pub.sock'
+                
                 sh 'ssh ubuntu@12.0.3.250 "pm2 restart server"'
                 
             }
