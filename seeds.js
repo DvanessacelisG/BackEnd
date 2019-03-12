@@ -5,10 +5,10 @@ const util = require('util')
 async function main () {
   try {
     const pool = mysql.createPool({
-      host: process.env.DB_HOST || 'vanessacelis.cm6hb8mfglop.us-east-1.rds.amazonaws.com',
-      user: process.env.DB_USER || 'VanessaCelis',
-      password: process.env.DB_PASS || 'Luciano0.',
-      database: process.env.DB_NAME || 'Vane_RDS'
+      host: process.env.DB_HOST || 'dbinstance.ce9pqrpiwhzr.us-east-1.rds.amazonaws.com',
+      user: process.env.DB_USER || 'dbvane',
+      password: process.env.DB_PASS || 'dbvanessa091612175',
+      database: process.env.DB_NAME || 'rampup'
     })
     pool.query = util.promisify(pool.query)
    const publicationsQuery = 'INSERT INTO publications (name, avatar) VALUES ?'
