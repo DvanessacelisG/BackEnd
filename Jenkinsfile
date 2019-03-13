@@ -10,8 +10,8 @@ pipeline {
         }
         stage ('push'){
             steps{
-            sh "export AWS_ACCESS_KEY_ID=AKIAJSXVMRRJOBQOFX2A"
-            sh "export AWS_SECRET_ACCESS_KEY=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"
+            sh "AWS_ACCESS_KEY_ID=AKIAIQCV3UVCZ4JMKHGQ"
+            sh "AWS_SECRET_ACCESS_KEY=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"
             sh "\$(aws ecr get-login --region us-east-1)"
             sh "docker tag 40db8d41ceb2 905326150904.dkr.ecr.us-east-1.amazonaws.com/vane-ecsrepo-3"
             sh "docker push 905326150904.dkr.ecr.us-east-1.amazonaws.com/vane-ecsrepo-3"
