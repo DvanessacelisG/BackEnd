@@ -3,7 +3,7 @@ pipeline {
     stages {         
         stage ('Build') {
             steps{
-                sh "docker build -t backEnd ."
+                sh "docker build -t backend ."
                 
             }          
         }
