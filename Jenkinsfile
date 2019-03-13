@@ -5,7 +5,7 @@ node {
   docker.build('demo')
  
   stage 'Docker push'
-  docker.withRegistry('https://1234567890.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:demo-ecr-credentials') {
+  docker.withRegistry('https://905326150904.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:vane-ecsrepo-3') {
     docker.image('demo').push('latest')
   }
 }
