@@ -5,7 +5,7 @@ pipeline {
             steps{
                // sh "docker rmi -f backend"
                 //sh "docker build -t backend ."
-    
+                sh "echo hola"
             }          
         }
         stage ('push'){
