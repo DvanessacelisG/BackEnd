@@ -3,7 +3,8 @@ pipeline {
     stages {         
         stage ('Build') {
             steps{
-                docker.build('demo')
+                sh "docker build -t BackEnd ."
+                
             }          
         }
     }
