@@ -10,8 +10,7 @@ pipeline {
         }
         stage ('push'){
             steps{
-           sh "eval $(aws ecr get-login --region eu-west-1 --no-include-email)"     
-           //sh("eval \$(aws ecr get-login --region us-east-1 --no-include-email | sed 's|https://||')")
+           sh("eval \$(aws ecr get-login --region us-east-1 --no-include-email | sed 's|https://||')")
                 
                 sh "docker tag back:latest 905326150904.dkr.ecr.us-east-1.amazonaws.com/backend"
             sh "docker push 905326150904.dkr.ecr.us-east-1.amazonaws.com/backend"
