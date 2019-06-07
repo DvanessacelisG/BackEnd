@@ -6,7 +6,7 @@ For Windows the Azure CLI is installed via an MSI, which gives you access to the
 
 ### Install or update
 The MSI distributable is used for installing or updating the Azure CLI on Windows.
-[Download the MSI installer] (https://aka.ms/installazurecliwindows)
+[Download the MSI installer](https://aka.ms/installazurecliwindows)
 
 #### Sign in
 You can now run the Azure CLI with the az command from either Windows Command Prompt or PowerShell.
@@ -39,12 +39,27 @@ az login
 ## Install on Linux or Windows Subsystem for Linux (WSL)
 
 ### Install with apt on Debian or Ubuntu
+> **WARNING**: This script is only verified for Ubuntu 16.04+ and Debian 8+ !
 ~~~~ 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ~~~~ 
-| WARNING: be careful to baz the quux before initializing the retro encabulator! |
-> **WARNING**: This script is only verified for Ubuntu 16.04+ and Debian 8+ !
 ### Install with yum on RHEL, Fedora, or CentOS
+> **WARNING**: The RPM package of the Azure CLI depends on the python package. On your system, this may be a Python version which predates the requirement of Python 2.7.x !
+
+1. Import the Microsoft repository key.
+~~~~
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+~~~~
+
+2. Create local azure-cli repository information.
+~~~~
+sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+~~~~
+
+3. Install with the yum install command.
+~~~~
+sudo yum install azure-cli
+~~~~
 
 
 
