@@ -43,7 +43,7 @@ az login
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ~~~~ 
 | WARNING: be careful to baz the quux before initializing the retro encabulator! |
-| --- |
+> **WARNING**: This script is only verified for Ubuntu 16.04+ and Debian 8+ !
 ### Install with yum on RHEL, Fedora, or CentOS
 
 
