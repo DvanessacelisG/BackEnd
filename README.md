@@ -11,7 +11,27 @@ Download the MSI installer Here (https://aka.ms/installazurecliwindows)
 #### Sign in
 You can now run the Azure CLI with the az command from either Windows Command Prompt or PowerShell.
 1. Run the login command
-`az login`
+~~~~ 
+az login
+~~~~ 
+2. Sign in with your account credentials in the browser.
+
+## Install Azure CLI on macOS
+For the macOS platform, you can install the Azure CLI with homebrew package manager. 
+
+### Install 
+Homebrew is the easiest way to manage your CLI install. It provides convenient ways to install, update, and uninstall. If you don't have homebrew available on your system, install homebrew before continuing.
+
+Install homebrew  Here (https://docs.brew.sh/Installation.html)
+
+ou can install the CLI by updating your brew repository information, and then running the install command
+~~~~ 
+brew update && brew install azure-cli
+~~~~ 
+
+#### Sign in
+You can now run the Azure CLI with the az command from either Windows Command Prompt or PowerShell.
+1. Run the login command
 ~~~~ 
 az login
 ~~~~ 
