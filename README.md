@@ -10,4 +10,9 @@ Download the MSI installer Here (https://aka.ms/installazurecliwindows)
 
 #### Sign in
 You can now run the Azure CLI with the az command from either Windows Command Prompt or PowerShell.
+1. Run the login command
 `az login`
+~~~~ az login ~~~~ 
+2. Sign in with your account credentials in the browser.
+
+
