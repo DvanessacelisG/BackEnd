@@ -61,5 +61,11 @@ sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.micro
 sudo yum install azure-cli
 ~~~~
 
+## Run Azure CLI in a Docker container
+You can use Docker to run a standalone Linux container with the Azure CLI pre-installed. Docker gets you started quickly with an isolated environment to run the CLI in.
 
+Install the CLI using docker run.
+~~~~
+docker run -it mcr.microsoft.com/azure-cli
+~~~~
 
