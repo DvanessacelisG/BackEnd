@@ -21,9 +21,17 @@ For the macOS platform, you can install the Azure CLI with homebrew package mana
 
 ### Install 
 Homebrew is the easiest way to manage your CLI install. It provides convenient ways to install, update, and uninstall. If you don't have homebrew available on your system, install homebrew before continuing.
-[Install homebrew](https://docs.brew.sh/Installation.html)
+#### How to Install Homebrew on Mac OS
+1. Open the “Terminal” application, found in /Applications/Utilities/
+2. Enter the following command into a single line of the terminal:
+~~~~
+/usr/bin/ruby -e 
+"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+~~~~
+3.Enter the administrator password (required by sudo execution) to begin installation
 
-ou can install the CLI by updating your brew repository information, and then running the install command
+
+You can install the CLI by updating your brew repository information, and then running the install command
 ~~~~ 
 brew update && brew install azure-cli
 ~~~~ 
