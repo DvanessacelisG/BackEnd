@@ -30,7 +30,7 @@ Homebrew is the easiest way to manage your CLI install. It provides convenient w
 ~~~~
 3.Enter the administrator password (required by sudo execution) to begin installation
 
-
+#### How to Install Azure CLI
 You can install the CLI by updating your brew repository information, and then running the install command
 ~~~~ 
 brew update && brew install azure-cli
