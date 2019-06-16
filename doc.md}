@@ -1,0 +1,28 @@
+For khufu's project, we used Azure as a Cloud provider, because it offers multiple services that help us to create and maintain easier and efficient the infrastructure.
+
+Infrastructure Design
+To create and deploy the infrastructure we used a series of tools/services like:
+
+Terraform: Help us to create the base infrastructure module to deploy the application, such as resource group, virtual network, subnets, container registry.
+Azure container instances(ACI): This service help to run containers without managing servers. In addition increase the security of virtual machines for container workloads.  ACI offers hypervisor isolation for each group of containers to ensure that containers run in isolation without sharing a in  kernel.
+Jenkins: Facilitate the creation of CI/CD stage, this tool allows us to trigger a jenkins build when a merge request is created.
+For more information about that, follow the next link: Bitbucket - Infrastructure Repository
+
+Branches strategy
+
+IaC branch: You can find all files related with infrastructure as code module.
+CI/CD branch: You can find the code related with CI/CD process.
+Dev-env branch: You can find all related with development environment. You can found more information following  Development Environment
+
+As we can see in the previous diagram we deploy the following resources:
+
+Virtual Private Cloud(Azure)
+Azure Container Instances: With this service we can run a container in the cloud without needing to pre-provision any servers at all. Actually  the billing model is per-second, you only pay while your containers are running,
+which can result in cost-savings and prevent a wasting on compute services.
+Azure Container Registry
+CosmosDB: with cosmosdb you have an easier time creating and managing a database system that is located in different parts of the world, it is also scalable, reliable, and highly available.
+
+##### If your a developer and you´re working with the locally environment(see here) you can download and install cosmosDb(https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-windows/)
+and you can work with the GUI for MongoDB, MongoDB Compass that allows you to make smarter decisions about document structure, querying, indexing, document validation, and more. 
+
+talk about jenkins cycle
